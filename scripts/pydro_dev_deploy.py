@@ -38,5 +38,4 @@ def deploy_csf_to_pydro():
 
 if __name__ == "__main__":    
     deploy_csf_to_pydro()
-    # increment_version()
     print('Done')
