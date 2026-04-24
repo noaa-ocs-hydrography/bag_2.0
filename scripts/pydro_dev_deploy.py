@@ -19,7 +19,7 @@ def clear_folder(folder):
     folder.rmdir()
 
 
-def deploy_csf_to_pydro():
+def deploy_bag_to_pydro():
     # Minimum files needed
     # scripts/
     #   BAG_2.x_converter_qt_gui.py
@@ -37,5 +37,5 @@ def deploy_csf_to_pydro():
 
 
 if __name__ == "__main__":    
-    deploy_csf_to_pydro()
+    deploy_bag_to_pydro()
     print('Done')
