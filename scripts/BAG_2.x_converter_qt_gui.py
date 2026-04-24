@@ -4,9 +4,19 @@ Created on Tue Jul 15 15:40:58 2025
 
 @author: Anthony.R.Klemm
 """
-
 import sys
 import os
+import subprocess
+
+
+# TODO Pydro is missing bagPy.  This force install sit in current environment
+def install_bagpy_library():
+    command = [sys.executable, '-m', 'conda', 'install', '-c', 'conda-forge', 'bagpy=2.0.1']
+    subprocess.check_call(command)
+    print('Installed bagPy v2.0.1')
+install_bagpy_library()
+
+
 from PySide6.QtCore import QObject, QThread, Signal, Slot, Qt
 from PySide6.QtWidgets import (
     QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
@@ -15,6 +25,7 @@ from PySide6.QtWidgets import (
 )
 
 from bag_processor import process_bags
+
 
 class Worker(QObject):
     """
